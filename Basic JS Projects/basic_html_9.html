@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="basic_js_9.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/basic_css_9.css">
+    </head>
+    <body>
+        <!-- input for countdown -->
+        <div class="container">
+            <p>Enter countdown for slideshow</p>
+            <input placeholder= "# of seconds" id= "seconds" value="">
+            <button onclick="countdown()">Start</button> 
+            <p id="timer"></p>
+        </div>
+         
+        <!-- slideshow -->
+        <div class="ssh-container">
+            <!-- individual images -->
+            <div class="my_slides fade">
+                <div class="num">1 / 3</div>
+                <img src="./img/sf.jpeg" style="width:100%" alt="SF">
+                <div class="text">San Francisco</div>
+            </div>
+            <div class="my_slides fade">
+                <div class="num">2 / 3</div>
+                <img src="./img/taipei.jpeg" style="width:100%" alt="Taipei">
+                <div class="text">Taipei</div>
+            </div>
+            <div class="my_slides fade">
+                <div class="num">3 / 3</div>
+                <img src="./img/seattle.jpeg" style="width:100%" alt="Seattle">
+                <div class="text">Seattle</div>
+            </div>
+
+            <!-- buttons -->
+            <a class="prev" onclick="plus_slide(-1)">&#10094;</a>
+            <a class="next" onclick="plus_slide(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- dots/circles -->
+        <div style="text-align: center;">
+            <span class="dot" onclick="current_slide(1)"></span>
+            <span class="dot" onclick="current_slide(2)"></span>
+            <span class="dot" onclick="current_slide(3)"></span>
+        </div>
+        
+        
+    </body>
+</html>
