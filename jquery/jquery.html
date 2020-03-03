@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <script>
+        $(document).ready(function(){
+            $("html").append( //  \ is continue in next line
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("p").css({"color":"red"});     //syntax: change font color of p to red in the css
+            $("#2").css({"color":"blue"});   //target id="2" p element
+            $("#1").dblclick(function (){    //change font size when double clicked
+                $("#1").css({"font-size":"2rem"});
+            })
+            $("#2").click(function() {      //words fade out when clicked
+                $("#2").fadeOut(1000);
+            })
+            $("#3").click(function () {      //hide h1 when p3 is clicked
+                $("h1").hide();
+            });
+        });
+    </script>
+</html>
